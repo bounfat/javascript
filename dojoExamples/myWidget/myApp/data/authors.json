@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Ertuğrul ÖZKÖK",
+    "avatar": "./myApp/widget/images/images1.png",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis gravida massa in convallis. Pellentesque quis laoreet ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  },
+  {
+    "name": "Taha AKYOL",
+    "avatar": "./myApp/widget/images/images2.png",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis gravida massa in convallis. Pellentesque quis laoreet ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  },
+  {
+    "name": "Ahmet HAKAN",
+    "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mattis gravida massa in convallis. Pellentesque quis laoreet ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+  },
+  {
+    "name": "Fikret BİLA",
+    "avatar": "./myApp/widget/images/images3.png",
+    "bio": "Phasellus quam odio, consequat nec ultrices sed, cursus sed libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin fermentum vel magna at consequat."
+  },
+  {
+    "name": "Latif DEMİRCİ",
+    "avatar": "./myApp/widget/images/images4.png",
+    "bio": "Phasellus quam odio, consequat nec ultrices sed, cursus sed libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin fermentum vel magna at consequat."
+  },
+  {
+    "name": "Osman MÜFTÜOĞLU",
+    "avatar": "./myApp/widget/images/images5.png",
+    "bio": "Phasellus quam odio, consequat nec ultrices sed, cursus sed libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin fermentum vel magna at consequat."
+  }
+]
