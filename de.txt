@@ -1,1 +1,13 @@
-deded
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://ajax.googleapis.com/ajax/libs/dojo/1/dijit/themes/claro/claro.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/dojo/1/dojo/dojo.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <h2>Hell0</h2>
+</body>
+</html>
