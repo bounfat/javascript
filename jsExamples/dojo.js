@@ -1,1 +1,2 @@
-console.log("deneme");
+console.log("dojo");
+console.log("dojo");
