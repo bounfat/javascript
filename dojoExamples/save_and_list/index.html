@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojox/grid/resources/Grid.css" />
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojox/grid/resources/claroGrid.css" />
+
+    <script>dojoConfig = {parseOnLoad: true}</script>
+    <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="isDebug: true, async: true"></script>
+
+    <!--<script type="text/javascript" src="js/dialog.js"></script>-->
+    <script type="text/javascript" src="js/cookie.js"></script>
+    <script type="text/javascript" src="js/grid.js"></script>
+
+
+</head>
+
+<body class="claro">
+<div data-dojo-type="dijit/Dialog" id="myFormDialog" data-dojo-id="myFormDialog" title="Registration"> <!--execute="console.log(dojo.toJson(arguments[0],true))"-->
+
+    <div class="dijitDialogPaneContentArea">
+        <table>
+            <tr>
+                <td><label for="name">Name: </label></td>
+                <td><input data-dojo-type="dijit/form/TextBox" type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="loc">Surname: </label></td>
+                <td><input data-dojo-type="dijit/form/TextBox" type="text" name="surname" id="surname"></td>
+            </tr>
+            <tr>
+                <td><label for="date">Start date: </label></td>
+                <td><input data-dojo-type="dijit/form/DateTextBox" data-dojo-id="myStartDate"
+                           onChange="myEndDate.constraints.min = arguments[0];" type="text" name="sdate" id="sdate">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="date">End date: </label></td>
+                <td><input data-dojo-type="dijit/form/DateTextBox" data-dojo-id="myEndDate"
+                           onChange="myStartDate.constraints.max = arguments[0];" type="text" name="edate" id="edate">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="date">Time: </label></td>
+                <td><input data-dojo-type="dijit/form/TimeTextBox" type="text" name="time" id="time"></td>
+            </tr>
+            <tr>
+                <td><label for="desc">Description: </label></td>
+                <td><input data-dojo-type="dijit/form/TextBox" type="text" name="description" id="description"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="dijitDialogPaneActionBar">
+        <button data-dojo-type="dijit/form/Button" type="submit" id="submit" onClick="myFormDialog.reset();">
+            Save
+        </button>
+        <button data-dojo-type="dijit/form/Button" type="reset" id="reset" onClick="myFormDialog.reset();myFormDialog.hide();">
+            Cancel
+        </button>
+    </div>
+</div>
+
+
+<button id="buttonThree" data-dojo-type="dijit/form/Button" type="button" onClick="myFormDialog.show();">
+    Registry
+</button>
+<br><br>
+<div id="grid"></div>
+<div id="results" class="results"></div>
+
+</body>
+</html>
