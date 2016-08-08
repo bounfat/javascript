@@ -18,30 +18,54 @@
 <script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
 
 <script>
-    // using the class elsewhere...
-    require(["my/Person", "my/Foo"], function (Person, Foo) {
+
+    /*require(["my/Person"], function (Person) {
         var anon = new Person(),
                 alice = new Person({name: "Alice", age: 42, residence: "Universe 1"});
 
-        console.log(anon.name); // "Anonymous", "Alice"
-        console.log(alice.name); // "Anonymous", "Alice"
-        console.log(anon.residence); // "Universe A", "Universe 1"
-        console.log(alice.residence); // "Universe A", "Universe 1"
+        console.log(anon.name); // "Anonymous"
+        console.log(alice.name); // "Alice"
+        console.log(anon.residence); // "Universe A"
+        console.log(alice.residence); // "Universe 1"
         alice.moveTo("Universe 420");
         console.log(alice.residence); // "Universe 420"
 
         console.log("-------------------------------");
+    });*/
 
+    require(["my/Foo"], function(Foo){
         var demo = new Foo();
         console.log(demo);
+        console.log("-------------------------------");
     });
 
-    require(["my/Employee", "my/Boss"], function(Employee, Boss){
+   /* require(["my/Employee", "my/Boss"], function (Employee, Boss) {
         var kathryn = new Boss("Kathryn", 26, "Minnesota", 9000),
-                matt    = new Employee("Matt", 33, "California", 1000);
+                matt = new Employee("Matt", 33, "California", 1000);
 
         console.log(kathryn.askForRaise(), matt.askForRaise()); // 2250, 20
+        console.log("-------------------------------");
     });
+
+
+    require(['my/Employee', 'my/Boss'], function (Employee, Boss) {
+        var kathryn = new Boss("Kathryn", 26, "Minnesota", 9000),
+                matt = new Employee("Matt", 33, "California", 1000);
+
+        console.log(kathryn.askForRaise(), matt.askForRaise()); // 3600, 20
+        console.log("-------------------------------");
+
+    });
+
+
+    require(["my/Blizzard"], function (Blizzard) {
+        // This will print to console:
+        // "adding soft serve",
+        // "mixing in oreos",
+        // "mixing in cookie dough",
+        // "A blizzard with plain oreos and medium-sized chunks of cookie dough."
+        var yummyTreat = new Blizzard();
+    });*/
 
 
 </script>
