@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Input Phone Number</title>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css">
+</head>
+<body class="claro">
+<label id="text">Phone:</label>
+<input id="textbox" data-dojo-type="uni/UniTextBox" data-dojo-attach-point="uniTextBoxNode">
+</body>
+<script>
+
+    var dojoConfig = {
+        async: true,
+        parseOnLoad: true,
+        packages: [{
+            name: "uni",
+            location: location.pathname.replace(/\/[^/]*$/, '') + '/uni'
+        }]
+    };
+</script>
+<!-- load Dojo -->
+<script src="//ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+
+<script>
+
+    require(["dojo/on", "dojo/dom", "uni/UniTextBox"], function (on, dom, UniTextBox) {
+        var textbox = new UniTextBox({}, "textbox");
+        textbox.startup();
+
+    });
+
+</script>
+</html>
