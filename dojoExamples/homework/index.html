@@ -7,13 +7,14 @@
 </head>
 <body class="claro">
 <label id="text">Phone:</label>
-<input id="textbox" data-dojo-type="uni/UniTextBox" data-dojo-attach-point="uniTextBoxNode">
+<input id="uniTextBox">
 </body>
 <script>
 
     var dojoConfig = {
         async: true,
         parseOnLoad: true,
+        isDebug:true,
         packages: [{
             name: "uni",
             location: location.pathname.replace(/\/[^/]*$/, '') + '/uni'
@@ -25,10 +26,18 @@
 
 <script>
 
-    require(["dojo/on", "dojo/dom", "uni/UniTextBox"], function (on, dom, UniTextBox) {
-        var textbox = new UniTextBox({}, "textbox");
+    require(["dojo/on", "dojo/dom", "dojo/parser", "dojo/ready", "uni/UniTextBox"], function (on, dom, parser, ready, UniTextBox) {
+        var textbox = new UniTextBox({}, "uniTextBox");
+        //textbox.set("value",10);
+
         textbox.startup();
+
+
+        /*ready(function(){
+            parser.parse();
+        });*/
     });
+
 
 </script>
 </html>
