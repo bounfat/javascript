@@ -25,24 +25,19 @@ define([
             on(dom.byId("uniTextBox"), "click", function () {
                 console.log("clicked");
             });
-        },
-
-        // Template kısmına tekrar bakılacak..!
-
-        /*templateString: "<div>" +
-         "<input " +
-         "data-dojo-attach-point='focusNode' " +
-         "data-dojo-attach-event='onclick: increment'" + " />"
-         + "</div>",*/
-
-        _setValueAttr: {node: "focusNode", type: "attribute", attribute: "value"},
-
-        increment: function () {
-            this.focusNode.value = ++this.value;
         }
-
-
     });
     return UniTextBox;
 });
 
+
+
+// Template kısmına tekrar bakılacak..!
+
+/*templateString: "<div>" +
+ "<input " +
+ "data-dojo-attach-point='focusNode' " +
+ "data-dojo-attach-event='onclick: increment'" + " />"
+ + "</div>",*/
+
+//_setValueAttr: {node: "focusNode", type: "attribute", attribute: "value"},
