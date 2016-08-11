@@ -52,25 +52,51 @@
 <script src="../../dojo-release-1.11.2-src/dojo/dojo.js"></script>
 <script>
 
-    require(["js/myTextBox", "js/myTextarea"], function (myTextBox, myTextArea) {
-        var userTextBox = new myTextBox({value: "user",}, "userTextBox");
-        var serverTextBox = new myTextBox({value: "server"}, "serverTextBox");
+    require(["js/myTextBox", "js/myTextarea", "dojo/on", "dojo/topic"], function (myTextBox, myTextArea, on, topic) {
+        var userTextBox = new myTextBox({}, "userTextBox");
+        var serverTextBox = new myTextBox({}, "serverTextBox");
+
         userTextBox.startup();
-        userTextBox.startup();
+        serverTextBox.startup();
 
         var userTextarea = new myTextArea({
-            value: "user text area",
             rows: 5,
             cols: 50,
             style: "width:350px;resize:none;height:250px;"
         }, "userTextarea");
+
         var serverTextarea = new myTextArea({
-            value: "server text area", rows: 5,
+            rows: 5,
             cols: 50,
             style: "width:350px;resize:none;height:250px;"
         }, "serverTextarea");
+
+
+        userTextBox.on("keypress", function (event) {
+            if (event.key == "Enter") {
+                topic.publish("message", {msg: this.get("value")});
+                this.reset();
+            }
+        });
+        var handle = topic.subscribe("message", function (e) {
+            serverTextarea.set("value", e.msg);
+            //handle.remove();
+        });
+
+        serverTextBox.on("keypress", function (event) {
+            if (event.key == "Enter") {
+                topic.publish("message2", {msg: this.get("value")});
+                this.reset();
+            }
+        });
+        var handle = topic.subscribe("message2", function (e) {
+            userTextarea.set("value", e.msg);
+            //handle.remove();
+        });
+
         userTextarea.startup();
         serverTextarea.startup();
+
     });
 
 </script>

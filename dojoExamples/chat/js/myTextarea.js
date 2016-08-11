@@ -6,7 +6,10 @@ define(["dojo/_base/declare", "dijit/form/Textarea"], function (declare, Textare
 
     var myTextarea = declare("myTextarea", [Textarea], {
         constructor: function () {
-            console.log("textarea created");
+
+        },
+        postCreate: function(){
+
         }
     });
     return myTextarea;

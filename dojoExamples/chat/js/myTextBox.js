@@ -2,13 +2,17 @@
  * Created by Fatih on 10.08.2016.
  */
 
-define(["dojo/_base/declare", "dijit/form/TextBox"], function (declare, TextBox) {
+define(["dojo/_base/declare", "dijit/form/TextBox", "dijit/_Widget", "dojo/on", "dojo/keys"], function (declare, TextBox, on, keys) {
 
     var myTextBox = declare("myTextBox", [TextBox], {
         constructor: function () {
-            console.log("created");
+
         },
-        value: "deneme"
+        value: "",
+        postCreate: function () {
+            this.inherited(arguments);
+        }
     });
+
     return myTextBox;
 });
