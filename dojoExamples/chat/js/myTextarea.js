@@ -8,7 +8,7 @@ define(["dojo/_base/declare", "dijit/form/Textarea"], function (declare, Textare
         constructor: function () {
             console.log("textarea created");
         }
-    })
+    });
     return myTextarea;
 
 });
